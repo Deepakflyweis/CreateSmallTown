@@ -25,9 +25,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 Get.toNamed('/welcomeScreen')
 
     );
-
-
-
   }
 
 

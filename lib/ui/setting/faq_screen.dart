@@ -67,40 +67,40 @@ class _FaqScreenState extends State<FaqScreen> {
               height: screenSize.height * 0.02,
             ),
 
-            //Search
-            Padding(
-              padding: EdgeInsets.all(15.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  borderRadius: BorderRadius.circular(5.0),
-                  border: Border.all(width: 0.3, color: Colors.black54),
-                  boxShadow: <BoxShadow>[
-                    BoxShadow(
-                      blurRadius: 1.5,
-                      spreadRadius: 1.5,
-                      color: Colors.grey.shade200,
+              //Search
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.circular(5.0),
+                    border: Border.all(width: 0.3, color: Colors.black54),
+                    boxShadow: <BoxShadow>[
+                      BoxShadow(
+                        blurRadius: 1.5,
+                        spreadRadius: 1.5,
+                        color: Colors.grey.shade200,
+                      ),
+                    ],
+                  ),
+                  child: TextFormField(
+                    // controller: _skill1,
+                    keyboardType: TextInputType.text,
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'Field can\'t be empty';
+                      }
+                      return null;
+                    },
+                    decoration: const InputDecoration(
+                      contentPadding: EdgeInsets.all(15.0),
+                      hintText: 'Search ',
+                      prefixIcon: Icon(Icons.search),
+                      border: InputBorder.none,
                     ),
-                  ],
-                ),
-                child: TextFormField(
-                  // controller: _skill1,
-                  keyboardType: TextInputType.text,
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'Field can\'t be empty';
-                    }
-                    return null;
-                  },
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.all(15.0),
-                    hintText: 'Search ',
-                    prefixIcon: Icon(Icons.search),
-                    border: InputBorder.none,
                   ),
                 ),
               ),
-            ),
 
 
             Container(
